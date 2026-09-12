@@ -1,0 +1,150 @@
+#amg-root {
+  --amg-ink: #16302B;
+  --amg-paper: #FFFFFF;
+  --amg-line: #DDE3E0;
+  --amg-accent: #0B6E4F;
+  --amg-accent-dark: #084D37;
+  --amg-warn: #A6431F;
+  --amg-muted: #5C6B67;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--amg-ink);
+  max-width: 640px;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+#amg-root *, #amg-root *::before, #amg-root *::after { box-sizing: inherit; }
+
+#amg-root .amg-card {
+  border: 1px solid var(--amg-line);
+  border-radius: 6px;
+  padding: 28px;
+  background: var(--amg-paper);
+}
+#amg-root h2.amg-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+#amg-root p.amg-sub {
+  margin: 0 0 22px;
+  color: var(--amg-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+#amg-root label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 18px;
+}
+#amg-root label:first-of-type { margin-top: 0; }
+#amg-root .amg-hint {
+  font-size: 12px;
+  color: var(--amg-muted);
+  font-weight: 400;
+  margin-left: 4px;
+}
+#amg-root textarea,
+#amg-root input[type="text"],
+#amg-root input[type="password"] {
+  width: 100%;
+  border: 1px solid var(--amg-line);
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--amg-ink);
+  background: #FBFCFB;
+}
+#amg-root textarea:focus,
+#amg-root input:focus {
+  outline: 2px solid var(--amg-accent);
+  outline-offset: 1px;
+  border-color: var(--amg-accent);
+}
+#amg-root textarea { min-height: 130px; resize: vertical; }
+
+#amg-root .amg-row { display: flex; gap: 12px; }
+#amg-root .amg-row > div { flex: 1; }
+
+#amg-root details.amg-key {
+  margin-top: 18px;
+  border: 1px dashed var(--amg-line);
+  border-radius: 4px;
+  padding: 10px 14px;
+}
+#amg-root details.amg-key summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--amg-accent-dark);
+}
+#amg-root details.amg-key .amg-key-body { margin-top: 10px; }
+#amg-root details.amg-key a { color: var(--amg-accent-dark); }
+
+#amg-root button.amg-generate {
+  margin-top: 22px;
+  width: 100%;
+  background: var(--amg-accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 13px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#amg-root button.amg-generate:hover { background: var(--amg-accent-dark); }
+#amg-root button.amg-generate:disabled { background: #A9BDB6; cursor: not-allowed; }
+
+#amg-root .amg-error {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 4px;
+  background: #FBEEE9;
+  color: var(--amg-warn);
+  font-size: 13px;
+  display: none;
+}
+
+#amg-root .amg-results { margin-top: 26px; display: none; }
+#amg-root .amg-result-item {
+  border-top: 1px solid var(--amg-line);
+  padding: 18px 0;
+}
+#amg-root .amg-result-item:first-child { border-top: none; padding-top: 0; }
+#amg-root .amg-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+#amg-root .amg-field-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--amg-muted);
+}
+#amg-root .amg-char-count { font-size: 11px; color: var(--amg-muted); }
+#amg-root .amg-char-count.amg-over { color: var(--amg-warn); }
+#amg-root .amg-field-text {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 2px;
+}
+#amg-root .amg-serp-title { color: #1a0dab; font-size: 18px; margin-bottom: 2px; }
+#amg-root .amg-serp-desc { color: #4d5156; font-size: 13px; }
+#amg-root .amg-copy-btn {
+  margin-top: 6px;
+  background: none;
+  border: 1px solid var(--amg-line);
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 4px 10px;
+  cursor: pointer;
+  color: var(--amg-accent-dark);
+}
+#amg-root .amg-copy-btn:hover { background: #F0F5F3; }

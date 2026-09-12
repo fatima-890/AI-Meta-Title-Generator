@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Meta Title & Description Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="amg-root">
+    <div class="amg-card">
+      <h2 class="amg-title">Meta Title &amp; Description Generator</h2>
+      <p class="amg-sub">Paste your page content and get SEO-ready title tags and meta descriptions, sized to fit Google's search results.</p>
+
+      <label for="amg-content">Page content <span class="amg-hint">(paste the article or main text)</span></label>
+      <textarea id="amg-content" placeholder="Paste your blog post or page content here..."></textarea>
+
+      <div class="amg-row">
+        <div>
+          <label for="amg-keyword">Target keyword <span class="amg-hint">(optional)</span></label>
+          <input type="text" id="amg-keyword" placeholder="e.g. best running shoes 2026">
+        </div>
+      </div>
+
+      <details class="amg-key">
+        <summary>Gemini API key (free) — set once</summary>
+        <div class="amg-key-body">
+          <label for="amg-apikey" style="margin-top:0;">Your API key</label>
+          <input type="password" id="amg-apikey" placeholder="Paste your Gemini API key">
+          <p class="amg-hint" style="display:block; margin-top:6px;">
+            Get a free key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>.
+            Saved only in your browser (localStorage).
+          </p>
+        </div>
+      </details>
+
+      <button class="amg-generate" id="amg-generate-btn">Generate Title &amp; Description</button>
+
+      <div class="amg-error" id="amg-error"></div>
+      <div class="amg-results" id="amg-results"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
